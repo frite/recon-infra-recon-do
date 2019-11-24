@@ -1,2 +1,13 @@
-# recon-infra-recon-do
-Terraform to provision recon box in Digital Ocean
+Recon Infrastructure for Reconaissance
+===
+
+Description
+---
+Digital Ocean.
+
+Required Variables
+---
+
+
+
+
