@@ -21,11 +21,11 @@ resource "digitalocean_droplet" "vm" {
   provisioner "remote-exec" {
     inline = [
       "export PATH=$PATH:/usr/bin",
-      "sudo apt-get update",
-      "sudo apt-get -y upgrade",
-      "sudo apt-get -y dist-upgrade",
-      "sudo apt-get -y autoremove",
-      "sudo apt-get install -y python"
+      "apt-get update",
+      "DEBIAN_FRONTEND=noninteractive apt-get -yq upgrade",
+      "DEBIAN_FRONTEND=noninteractive apt-get -yq dist-upgrade",
+      "DEBIAN_FRONTEND=noninteractive apt-get -yq autoremove",
+      "DEBIAN_FRONTEND=noninteractive apt-get install -yq python"
     ]
     connection {
       user = "root"
